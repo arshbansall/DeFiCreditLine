@@ -1,0 +1,22 @@
+{
+  "name": "minicreditline",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "workspaces": ["apps/*", "packages/*"],
+  "private": true,
+  "scripts": {
+    "dev": "npm run dev -w apps/api",
+    "worker": "npm run dev -w apps/worker",
+    "chain": "npm run dev -w apps/chain",
+    "contracts": "npm run -w apps/contracts",
+    "db": "docker compose up -d",
+    "db:down": "docker compose down",
+    "lint": "npm run lint -ws",
+    "test": "npm run test -ws"
+  },
+  "keywords": [],
+  "author": "Arsh Bansal",
+  "license": "ISC",
+  "type": "commonjs"
+}
